@@ -1,7 +1,7 @@
 <div align="center">
 
 <p>
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0D0221,45:2E1065,80:4C1D95,100:4F46E5&height=230&section=header&text=Shibli%20Rahman%20Moon&fontSize=54&fontColor=EDE9FE&fontAlignY=36&animation=fadeIn&desc=Software%20Engineer%20%C2%B7%20AI%20%2F%20ML%20%C2%B7%20Full-Stack%20Developer&descSize=18&descAlignY=56" width="100%" alt="Shibli Rahman Moon"/>
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0D0221,45:2E1065,80:4C1D95,100:4F46E5&height=230&section=header&text=Shibli%20Rahman%20Moon&fontSize=54&fontColor=EDE9FE&fontAlignY=36&desc=Software%20Engineer%20%C2%B7%20AI%20%2F%20ML%20%C2%B7%20Full-Stack%20Developer&descSize=18&descAlignY=56" width="100%" alt="Shibli Rahman Moon"/>
 </p>
 
 <p>
@@ -9,13 +9,15 @@
 </p>
 
 <p>
-  <img src="./profile/hero.svg" width="620" alt="Contributions in the last year"/>
+  <img src="https://raw.githubusercontent.com/moon-drakon/moon-drakon/main/profile/hero.svg" width="620" alt="Contributions in the last year"/>
 </p>
 
-<a href="https://github.com/moon-drakon?tab=repositories">portfolio</a> &nbsp;·&nbsp;
-<a href="https://www.linkedin.com/in/YOUR_LINKEDIN_ID/">linkedin</a> &nbsp;·&nbsp;
-<a href="mailto:shibimoon08@gmail.com">email</a> &nbsp;·&nbsp;
-<a href="https://github.com/moon-drakon">github</a>
+<p>
+  <a href="https://github.com/moon-drakon?tab=repositories"><img src="https://img.shields.io/badge/PORTFOLIO-VISIT-7C3AED?style=for-the-badge&logo=googlechrome&logoColor=white&labelColor=0D1117" alt="Portfolio"/></a>
+  <a href="https://www.linkedin.com/in/YOUR_LINKEDIN_ID/"><img src="https://img.shields.io/badge/LINKEDIN-CONNECT-6366F1?style=for-the-badge&logo=data:image/svg%2Bxml;base64,PHN2ZyBmaWxsPSJ3aGl0ZSIgcm9sZT0iaW1nIiB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI%2BPHRpdGxlPkxpbmtlZEluPC90aXRsZT48cGF0aCBkPSJNMjAuNDQ3IDIwLjQ1MmgtMy41NTR2LTUuNTY5YzAtMS4zMjgtLjAyNy0zLjAzNy0xLjg1Mi0zLjAzNy0xLjg1MyAwLTIuMTM2IDEuNDQ1LTIuMTM2IDIuOTM5djUuNjY3SDkuMzUxVjloMy40MTR2MS41NjFoLjA0NmMuNDc3LS45IDEuNjM3LTEuODUgMy4zNy0xLjg1IDMuNjAxIDAgNC4yNjcgMi4zNyA0LjI2NyA1LjQ1NXY2LjI4NnpNNS4zMzcgNy40MzNjLTEuMTQ0IDAtMi4wNjMtLjkyNi0yLjA2My0yLjA2NSAwLTEuMTM4LjkyLTIuMDYzIDIuMDYzLTIuMDYzIDEuMTQgMCAyLjA2NC45MjUgMi4wNjQgMi4wNjMgMCAxLjEzOS0uOTI1IDIuMDY1LTIuMDY0IDIuMDY1em0xLjc4MiAxMy4wMTlIMy41NTVWOWgzLjU2NHYxMS40NTJ6TTIyLjIyNSAwSDEuNzcxQy43OTIgMCAwIC43NzQgMCAxLjcyOXYyMC41NDJDMCAyMy4yMjcuNzkyIDI0IDEuNzcxIDI0aDIwLjQ1MUMyMy4yIDI0IDI0IDIzLjIyNyAyNCAyMi4yNzFWMS43MjlDMjQgLjc3NCAyMy4yIDAgMjIuMjIyIDBoLjAwM3oiLz48L3N2Zz4=&labelColor=0D1117" alt="LinkedIn"/></a>
+  <a href="mailto:shibimoon08@gmail.com"><img src="https://img.shields.io/badge/EMAIL-CONTACT-4F46E5?style=for-the-badge&logo=gmail&logoColor=white&labelColor=0D1117" alt="Email"/></a>
+  <a href="https://github.com/moon-drakon"><img src="https://img.shields.io/badge/GITHUB-MOON--DRAKON-8B5CF6?style=for-the-badge&logo=github&logoColor=white&labelColor=0D1117" alt="GitHub"/></a>
+</p>
 
 <p>
   <img src="https://komarev.com/ghpvc/?username=moon-drakon&label=PROFILE+VIEWS&color=7C3AED&style=for-the-badge&abbreviated=true" alt="Profile views"/>
@@ -287,12 +289,12 @@ I build and document software in public. I focus on clean code, security, and re
 <div align="center">
 
 <p>
-  <img src="./profile/stats.svg" height="165" alt="GitHub stats"/>
-  <img src="https://streak-stats.demolab.com?user=moon-drakon&hide_border=true&background=0D1117&stroke=2E1065&ring=7C3AED&fire=A78BFA&currStreakNum=EDE9FE&sideNums=EDE9FE&currStreakLabel=A78BFA&sideLabels=C4B5FD&dates=8B949E" height="165" alt="GitHub streak"/>
+  <img src="https://raw.githubusercontent.com/moon-drakon/moon-drakon/main/profile/stats.svg" height="165" alt="GitHub stats"/>
+  <img src="https://streak-stats.demolab.com?user=moon-drakon&disable_animations=true&hide_border=true&background=0D1117&stroke=2E1065&ring=7C3AED&fire=A78BFA&currStreakNum=EDE9FE&sideNums=EDE9FE&currStreakLabel=A78BFA&sideLabels=C4B5FD&dates=8B949E" height="165" alt="GitHub streak"/>
 </p>
 
 <p>
-  <img src="./profile/top-langs.svg" height="165" alt="Top languages"/>
+  <img src="https://raw.githubusercontent.com/moon-drakon/moon-drakon/main/profile/top-langs.svg" height="165" alt="Top languages"/>
 </p>
 
 </div>
@@ -304,7 +306,7 @@ I build and document software in public. I focus on clean code, security, and re
 <div align="center">
 
 <p>
-  <img src="./profile/trophy.svg" alt="GitHub trophies"/>
+  <img src="https://raw.githubusercontent.com/moon-drakon/moon-drakon/main/profile/trophy.svg" alt="GitHub trophies"/>
 </p>
 
 </div>
@@ -316,7 +318,7 @@ I build and document software in public. I focus on clean code, security, and re
 <div align="center">
 
 <p>
-  <img src="./profile/activity-graph.svg" width="100%" alt="Contribution activity graph"/>
+  <img src="https://raw.githubusercontent.com/moon-drakon/moon-drakon/main/profile/activity-graph.svg" width="100%" alt="Contribution activity graph"/>
 </p>
 
 </div>

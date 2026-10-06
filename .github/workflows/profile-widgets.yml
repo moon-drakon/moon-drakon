@@ -38,7 +38,7 @@ jobs:
         uses: stats-organization/github-readme-stats-action@v2
         with:
           card: stats
-          options: "username=${{ github.repository_owner }}&show_icons=true&include_all_commits=true&hide_border=true&rank_icon=github&bg_color=0D1117&title_color=A78BFA&icon_color=7C3AED&text_color=C9D1D9&ring_color=7C3AED"
+          options: "username=${{ github.repository_owner }}&disable_animations=true&show_icons=true&include_all_commits=true&hide_border=true&rank_icon=github&bg_color=0D1117&title_color=A78BFA&icon_color=7C3AED&text_color=C9D1D9&ring_color=7C3AED"
           path: profile/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
@@ -47,7 +47,7 @@ jobs:
         uses: stats-organization/github-readme-stats-action@v2
         with:
           card: top-langs
-          options: "username=${{ github.repository_owner }}&layout=compact&langs_count=8&hide_border=true&bg_color=0D1117&title_color=A78BFA&text_color=C9D1D9"
+          options: "username=${{ github.repository_owner }}&disable_animations=true&layout=compact&langs_count=8&hide_border=true&bg_color=0D1117&title_color=A78BFA&text_color=C9D1D9"
           path: profile/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
@@ -86,6 +86,16 @@ jobs:
           npx ts-node --transpile-only src/main.ts &
           for i in $(seq 1 60); do curl -s -o /dev/null "http://localhost:$PORT/" && break; sleep 1; done
           curl -fsS "http://localhost:$PORT/graph?username=$OWNER&bg_color=0D1117&color=A78BFA&line=7C3AED&point=EDE9FE&area=true&area_color=4F46E5&hide_border=true&custom_title=Contribution%20Activity" -o "$GITHUB_WORKSPACE/profile/activity-graph.svg"
+          # The line rests hidden and relies on a CSS animation to appear. Rest it
+          # visible and animate from hidden, so static renderers still show it.
+          python3 - "$GITHUB_WORKSPACE/profile/activity-graph.svg" <<'PY'
+          import re, sys
+          p = sys.argv[1]
+          s = open(p, encoding="utf-8").read()
+          s = s.replace("stroke-dashoffset: 5000;", "stroke-dashoffset: 0;", 1)
+          s = re.sub(r"@keyframes dash\s*\{\s*to\s*\{", "@keyframes dash { from { stroke-dashoffset: 5000; } to {", s, count=1)
+          open(p, "w", encoding="utf-8").write(s)
+          PY
 
       - name: Commit widgets
         run: |
