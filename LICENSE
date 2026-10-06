@@ -1,0 +1,15 @@
+Copyright (c) 2026 Shibli Rahman Moon (moon-drakon). All rights reserved.
+
+This repository holds my GitHub profile: the README, the ASCII portrait, the
+generated graphics, and the scripts and workflow that build them.
+
+GitHub's Terms of Service let people view and fork this public repository on
+GitHub. No other rights are granted. You may not copy, reuse, redistribute,
+modify, or sell any part of it, or present it as your own profile, without my
+written permission. To ask, email shibimoon08@gmail.com.
+
+Third-party material keeps its own license:
+
+- scripts/fonts/ contains subsets of JetBrains Mono, licensed under the SIL
+  Open Font License 1.1. See scripts/fonts/OFL.txt.
+- Badges, cards, and icons loaded from outside services belong to their owners.
