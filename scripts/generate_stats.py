@@ -9,13 +9,15 @@ hero.svg: contributions in the last year, active days, best week, and a weekly
 sparkline. The window is pinned to whole UTC days so two runs on the same day
 produce the same file.
 
-skyline.svg: the same year as an isometric skyline (see skyline.py).
+skyline.svg and heatmap.svg: the same year as an isometric skyline and as a
+flat heat map (see skyline.py).
 
 stars.json: a shields.io endpoint badge with the number on the profile's Stars
 tab (repositories this account has starred).
 
-codeforces.json: a shields.io endpoint badge with the count of solved Codeforces
-problems, when CF_HANDLE is set. If the Codeforces API fails, the old file stays.
+codeforces.json, leetcode.json, gfg.json: shields.io endpoint badges with solved
+problem counts, when CF_HANDLE, LC_HANDLE, or GFG_HANDLE is set. A count of zero
+shows PROFILE. If an API fails, the old file stays; with no old file, PROFILE.
 """
 import base64
 import datetime as dt
@@ -162,6 +164,44 @@ def write_badge(name, label, message):
         f.write("\n")
 
 
+def get_json(url, data=None, headers=None):
+    req = urllib.request.Request(url, data=data, headers={"User-Agent": "Mozilla/5.0 profile-stats", **(headers or {})})
+    with urllib.request.urlopen(req, timeout=30) as r:
+        return json.load(r)
+
+
+def update_solved_badge(name, label, solved):
+    """Write "N SOLVED", or PROFILE for zero. On a failed fetch keep the old file."""
+    path = os.path.join(OUT, name)
+    if solved is None and os.path.exists(path):
+        print(f"{label.lower()} skipped, kept the old badge")
+        return
+    write_badge(name, label, f"{solved} SOLVED" if solved else "PROFILE")
+    print(f"{label.lower()} solved={solved}")
+
+
+def leetcode_solved(handle):
+    query = "query($u:String!){matchedUser(username:$u){submitStatsGlobal{acSubmissionNum{difficulty count}}}}"
+    try:
+        body = get_json("https://leetcode.com/graphql",
+                        data=json.dumps({"query": query, "variables": {"u": handle}}).encode(),
+                        headers={"Content-Type": "application/json", "Referer": f"https://leetcode.com/u/{handle}/"})
+        nums = body["data"]["matchedUser"]["submitStatsGlobal"]["acSubmissionNum"]
+        return next(n["count"] for n in nums if n["difficulty"] == "All")
+    except Exception as e:  # blocked, renamed, or offline
+        print(f"leetcode failed: {e}")
+        return None
+
+
+def gfg_solved(handle):
+    url = f"https://authapi.geeksforgeeks.org/api-get/user-profile-info/?handle={urllib.request.quote(handle)}"
+    try:
+        return int(get_json(url)["data"]["total_problems_solved"])
+    except Exception as e:
+        print(f"gfg failed: {e}")
+        return None
+
+
 def codeforces_solved(handle):
     """Distinct problems with an accepted submission, or None if the API is unavailable."""
     url = f"https://codeforces.com/api/user.status?handle={urllib.request.quote(handle)}"
@@ -192,13 +232,17 @@ def main():
     fonts = font_face("SMono", "mono-label.woff2", 400) + font_face("SMono", "mono-number.woff2", 700)
     with open(os.path.join(OUT, "skyline.svg"), "w", encoding="utf-8", newline="\n") as f:
         f.write(skyline.draw(s["days"], end, fonts))
+    with open(os.path.join(OUT, "heatmap.svg"), "w", encoding="utf-8", newline="\n") as f:
+        f.write(skyline.draw_heatmap(s["days"], end, fonts))
     write_badge("stars.json", "STARS", str(s["starred"]))
-    handle = os.environ.get("CF_HANDLE")
-    if handle:
-        solved = codeforces_solved(handle)
-        if solved is not None:
-            write_badge("codeforces.json", "CODEFORCES", f"{solved} SOLVED")
-            print(f"codeforces solved={solved}")
+    for env, name, label, counter in (
+        ("CF_HANDLE", "codeforces.json", "CODEFORCES", codeforces_solved),
+        ("LC_HANDLE", "leetcode.json", "LEETCODE", leetcode_solved),
+        ("GFG_HANDLE", "gfg.json", "GEEKSFORGEEKS", gfg_solved),
+    ):
+        handle = os.environ.get(env)
+        if handle:
+            update_solved_badge(name, label, counter(handle))
     print(f"total={s['total']} active={s['active']} best_week={s['best_week']} starred={s['starred']}")
 
 

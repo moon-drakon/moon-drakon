@@ -32,6 +32,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_LOGIN: ${{ github.repository_owner }}
           CF_HANDLE: shiblimoon
+          LC_HANDLE: moon_drakon
+          GFG_HANDLE: drakonn
         run: python3 scripts/generate_stats.py
 
       - name: GitHub stats card

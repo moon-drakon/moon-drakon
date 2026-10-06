@@ -151,6 +151,17 @@ def palette_css():
     return "".join(rules)
 
 
+def styles(font_css):
+    mono = "SMono,ui-monospace,SFMono-Regular,Menlo,Consolas,monospace"
+    return (
+        font_css
+        + f"text{{font-family:{mono}}}"
+        + ".f{fill:#1f2328}.m{fill:#57606a}.a{fill:#196127;font-weight:700}.bd{fill:none;stroke:#d0d7de}"
+        + "@media (prefers-color-scheme:dark){.f{fill:#e6edf3}.m{fill:#8b949e}.a{fill:#39d353}.bd{stroke:#30363d}}"
+        + palette_css()
+    )
+
+
 def text_w(s, size):
     return len(s) * size * CHAR
 
@@ -269,14 +280,7 @@ def draw(days, end, font_css):
     legend.append(f'<text class="m" x="{lx:.1f}" y="{ly + 10}" font-size="12">Less</text>')
 
     fade = ('<animate attributeName="opacity" values="0;0;1" keyTimes="0;0.6;1" dur="2.4s" fill="freeze"/>')
-    mono = "SMono,ui-monospace,SFMono-Regular,Menlo,Consolas,monospace"
-    css = (
-        font_css
-        + f"text{{font-family:{mono}}}"
-        + ".f{fill:#1f2328}.m{fill:#57606a}.a{fill:#196127;font-weight:700}.bd{fill:none;stroke:#d0d7de}"
-        + "@media (prefers-color-scheme:dark){.f{fill:#e6edf3}.m{fill:#8b949e}.a{fill:#39d353}.bd{stroke:#30363d}}"
-        + palette_css()
-    )
+    css = styles(font_css)
     title = (f'<text class="f" x="{PAD + 12}" y="{PAD + 26}" font-size="15">'
              f'<tspan class="a" font-size="15">{total:,}</tspan> {unit(total)} in the last year</text>')
     return (
@@ -285,6 +289,95 @@ def draw(days, end, font_css):
         f"<style>{css}</style>"
         f'<rect class="bd" x="0.5" y="0.5" width="{WIDTH - 1}" height="{height - 1}" rx="12"/>'
         f"{title}{''.join(out)}<g>{fade}{''.join(labels)}{corners}</g>"
+        f'<text class="m" x="{PAD + 12}" y="{ly + 10}" font-size="12">Updated daily from the GitHub API</text>'
+        f"{''.join(legend)}</svg>\n"
+    )
+
+
+def draw_heatmap(days, end, font_css):
+    """The component's flat view: the same grid seen straight down, with the stats row under it."""
+    cells, weeks, _ = build_grid(days, end)
+    stats = compute_stats(cells)
+    months = month_labels(cells, weeks)
+
+    gutter = 34
+    left = PAD + 14 + gutter
+    pitch = (WIDTH - left - PAD - 14) / max(1, weeks)
+    size = pitch * 0.8
+    grid_top = PAD + HEADER + 22
+    grid_h = pitch * 7
+
+    # Cells fade in week by week, oldest first. They rest visible without SMIL.
+    out = []
+    for w in range(weeks):
+        delay = 1.2 * w / max(1, weeks - 1)
+        dur = delay + 0.35
+        key = delay / dur
+        rects = []
+        for c in cells[w * 7:(w + 1) * 7]:
+            x = left + w * pitch
+            y = grid_top + c["day"] * pitch
+            rects.append(f'<rect class="c{c["level"]}t" x="{x:.1f}" y="{y:.1f}" width="{size:.1f}" height="{size:.1f}" rx="2.5"/>')
+        out.append(f'<g><animate attributeName="opacity" values="0;0;1" keyTimes="0;{key:.3f};1" '
+                   f'dur="{dur:.2f}s" fill="freeze"/>{"".join(rects)}</g>')
+
+    labels, edge = [], -1e9
+    for wk, name in months:
+        x = left + wk * pitch
+        if x < edge or x + text_w(name, 11) > WIDTH - PAD:
+            continue
+        labels.append(f'<text class="m" x="{x:.1f}" y="{grid_top - 8}" font-size="11">{name}</text>')
+        edge = x + text_w(name, 11) + 6
+    for d in range(min(7, len(cells))):
+        dow = (cells[d]["date"].weekday() + 1) % 7
+        if dow in (1, 3, 5):
+            name = cells[d]["date"].strftime("%a")
+            y = grid_top + d * pitch + size / 2 + 4
+            labels.append(f'<text class="m" x="{left - 8}" y="{y:.1f}" font-size="11" text-anchor="end">{name}</text>')
+
+    def unit(n, one="contribution"):
+        return one if n == 1 else one + "s"
+
+    total = stats["total"]
+    b_count, b_date = stats["busiest"]
+    l_days, l_a, l_b = stats["longest"]
+    c_days, c_a, c_b = stats["current"]
+    blocks = [
+        ("1 year total", f"{total:,}", unit(total), span(stats["first"], stats["last"], True)),
+        ("Busiest day", f"{b_count:,}", unit(b_count), short(b_date) if b_date else "none yet"),
+        ("Longest streak", f"{l_days:,}", "day" if l_days == 1 else "days", span(l_a, l_b)),
+        ("Current streak", f"{c_days:,}", "day" if c_days == 1 else "days", span(c_a, c_b)),
+    ]
+    col_w = (WIDTH - PAD * 2 - 28) / 4
+    stat_top = grid_top + grid_h + 34
+    row = []
+    for i, (label, value, unit_text, sub) in enumerate(blocks):
+        x = PAD + 14 + i * col_w
+        row.append(
+            f'<text class="m" x="{x:.1f}" y="{stat_top}" font-size="12">{label}</text>'
+            f'<text class="a" x="{x:.1f}" y="{stat_top + 32}" font-size="28">{value}</text>'
+            f'<text class="f" x="{x + text_w(value, 28) + 8:.1f}" y="{stat_top + 32}" font-size="13">{unit_text}</text>'
+            f'<text class="m" x="{x:.1f}" y="{stat_top + 50}" font-size="11">{sub}</text>'
+        )
+
+    height = round(stat_top + 50 + 30 + 28 + PAD)
+    ly = height - PAD - 14
+    lx = WIDTH - PAD - 12 - text_w("More", 12)
+    legend = [f'<text class="m" x="{lx:.1f}" y="{ly + 10}" font-size="12">More</text>']
+    for i in range(4, -1, -1):
+        lx -= 15
+        legend.append(f'<rect class="c{i}t" x="{lx:.1f}" y="{ly}" width="11" height="11" rx="2"/>')
+    lx -= 6 + text_w("Less", 12)
+    legend.append(f'<text class="m" x="{lx:.1f}" y="{ly + 10}" font-size="12">Less</text>')
+
+    title = (f'<text class="f" x="{PAD + 12}" y="{PAD + 26}" font-size="15">'
+             f'<tspan class="a" font-size="15">{total:,}</tspan> {unit(total)} in the last year</text>')
+    return (
+        f'<svg xmlns="http://www.w3.org/2000/svg" width="{WIDTH}" height="{height}" viewBox="0 0 {WIDTH} {height}" '
+        f'role="img" aria-label="{total:,} contributions in the last year, shown as a heat map">'
+        f"<style>{styles(font_css)}</style>"
+        f'<rect class="bd" x="0.5" y="0.5" width="{WIDTH - 1}" height="{height - 1}" rx="12"/>'
+        f"{title}{''.join(labels)}{''.join(out)}{''.join(row)}"
         f'<text class="m" x="{PAD + 12}" y="{ly + 10}" font-size="12">Updated daily from the GitHub API</text>'
         f"{''.join(legend)}</svg>\n"
     )

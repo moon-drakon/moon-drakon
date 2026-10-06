@@ -360,18 +360,18 @@ I build and document software in public. I focus on clean code, security, and re
 
 <p>
   <a href="https://codeforces.com/profile/shiblimoon"><img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fmoon-drakon%2Fmoon-drakon%2Fmain%2Fprofile%2Fcodeforces.json&style=for-the-badge&logo=codeforces&logoColor=white&color=7C3AED&labelColor=0D1117" height="40" alt="Codeforces"/></a>
+  &nbsp;
+  <a href="https://leetcode.com/u/moon_drakon/"><img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fmoon-drakon%2Fmoon-drakon%2Fmain%2Fprofile%2Fleetcode.json&style=for-the-badge&logo=leetcode&logoColor=white&color=6366F1&labelColor=0D1117" height="40" alt="LeetCode"/></a>
 </p>
 
 <p>
-  <a href="https://leetcode.com/u/YOUR_LEETCODE_USERNAME/"><img src="https://img.shields.io/badge/LeetCode-Problem%20Solving-7C3AED?style=for-the-badge&logo=leetcode&logoColor=white&labelColor=0D1117" height="40" alt="LeetCode"/></a>
+  <a href="https://www.geeksforgeeks.org/profile/drakonn"><img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fmoon-drakon%2Fmoon-drakon%2Fmain%2Fprofile%2Fgfg.json&style=for-the-badge&logo=geeksforgeeks&logoColor=white&color=4F46E5&labelColor=0D1117" height="40" alt="GeeksforGeeks"/></a>
   &nbsp;
-  <a href="https://www.geeksforgeeks.org/user/YOUR_GFG_USERNAME/"><img src="https://img.shields.io/badge/GeeksforGeeks-Data%20Structures-6366F1?style=for-the-badge&logo=geeksforgeeks&logoColor=white&labelColor=0D1117" height="40" alt="GeeksforGeeks"/></a>
+  <a href="https://www.hackerrank.com/profile/moon_drakon"><img src="https://img.shields.io/badge/HACKERRANK-PROFILE-8B5CF6?style=for-the-badge&logo=hackerrank&logoColor=white&labelColor=0D1117" height="40" alt="HackerRank"/></a>
 </p>
 
 <p>
-  <a href="https://www.hackerrank.com/profile/YOUR_HACKERRANK_USERNAME"><img src="https://img.shields.io/badge/HackerRank-Challenges-4F46E5?style=for-the-badge&logo=hackerrank&logoColor=white&labelColor=0D1117" height="40" alt="HackerRank"/></a>
-  &nbsp;
-  <a href="https://www.codechef.com/users/YOUR_CODECHEF_USERNAME"><img src="https://img.shields.io/badge/CodeChef-Competitive%20Programming-8B5CF6?style=for-the-badge&logo=codechef&logoColor=white&labelColor=0D1117" height="40" alt="CodeChef"/></a>
+  <a href="https://www.codechef.com/users/moon_drakon"><img src="https://img.shields.io/badge/CODECHEF-PROFILE-5B21B6?style=for-the-badge&logo=codechef&logoColor=white&labelColor=0D1117" height="40" alt="CodeChef"/></a>
 </p>
 
 </div>
@@ -412,10 +412,25 @@ I build and document software in public. I focus on clean code, security, and re
 <div align="center">
 
 <p>
-  <img src="https://raw.githubusercontent.com/moon-drakon/moon-drakon/main/profile/skyline.svg" width="100%" alt="A year of contributions shown as a 3D skyline"/>
+  <a href="https://moon-drakon.github.io/contribution-skyline/"><img src="https://raw.githubusercontent.com/moon-drakon/moon-drakon/main/profile/skyline.svg" width="100%" alt="A year of contributions shown as a 3D skyline"/></a>
+</p>
+
+<p>
+  <a href="https://moon-drakon.github.io/contribution-skyline/"><img src="https://img.shields.io/badge/OPEN-INTERACTIVE%203D%20VIEW-26A641?style=for-the-badge&logo=githubpages&logoColor=white&labelColor=0D1117" alt="Open the interactive 3D view"/></a>
 </p>
 
 </div>
+
+<details>
+<summary><b>Flat heat map view</b></summary>
+
+<br/>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/moon-drakon/moon-drakon/main/profile/heatmap.svg" width="100%" alt="A year of contributions shown as a heat map"/>
+</p>
+
+</details>
 
 ---
 
