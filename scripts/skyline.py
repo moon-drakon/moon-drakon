@@ -11,9 +11,9 @@ Standard library only. generate_stats.py calls draw().
 import datetime as dt
 import math
 
-# Grape palette from the component, lightest activity to heaviest.
-LEVELS_LIGHT = ["#e4d4fb", "#b794f4", "#805ad5", "#44337a"]
-LEVELS_DARK = ["#2d1f4f", "#553c9a", "#8b5cf6", "#c4b5fd"]
+# GitHub palette from the component, lightest activity to heaviest.
+LEVELS_LIGHT = ["#c6e48b", "#7bc96f", "#239a3b", "#196127"]
+LEVELS_DARK = ["#0e4429", "#006d32", "#26a641", "#39d353"]
 EMPTY_LIGHT = "#eeefef"   # GitHub light background mixed 7.5% toward its text color
 EMPTY_DARK = "#22262c"    # GitHub dark background mixed 11% toward its text color
 
@@ -273,8 +273,8 @@ def draw(days, end, font_css):
     css = (
         font_css
         + f"text{{font-family:{mono}}}"
-        + ".f{fill:#1f2328}.m{fill:#57606a}.a{fill:#44337a;font-weight:700}.bd{fill:none;stroke:#d0d7de}"
-        + "@media (prefers-color-scheme:dark){.f{fill:#e6edf3}.m{fill:#8b949e}.a{fill:#c4b5fd}.bd{stroke:#30363d}}"
+        + ".f{fill:#1f2328}.m{fill:#57606a}.a{fill:#196127;font-weight:700}.bd{fill:none;stroke:#d0d7de}"
+        + "@media (prefers-color-scheme:dark){.f{fill:#e6edf3}.m{fill:#8b949e}.a{fill:#39d353}.bd{stroke:#30363d}}"
         + palette_css()
     )
     title = (f'<text class="f" x="{PAD + 12}" y="{PAD + 26}" font-size="15">'
