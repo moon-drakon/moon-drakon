@@ -5,7 +5,11 @@
 </p>
 
 <p>
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&duration=3200&pause=900&color=A78BFA&center=true&vCenter=true&width=760&lines=Software+engineer+building+secure+apps;Java%2C+C%2C+and+full-stack+web+development;Learning+applied+AI+and+machine+learning;Open+to+internships+and+open-source+work" alt="Software engineer building secure apps"/>
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&duration=3200&pause=900&color=A78BFA&center=true&vCenter=true&width=760&lines=Software+engineer+building+secure+apps;Full-stack+web+apps+with+Next.js+and+Supabase;Learning+applied+AI+and+machine+learning;Open+to+internships+and+open-source+work" alt="Software engineer building secure apps"/>
+</p>
+
+<p>
+  <img src="https://raw.githubusercontent.com/moon-drakon/moon-drakon/main/profile/portrait.svg" width="460" alt="Shibli Rahman Moon, ASCII portrait"/>
 </p>
 
 <p>
@@ -14,7 +18,7 @@
 
 <p>
   <a href="https://github.com/moon-drakon?tab=repositories"><img src="https://img.shields.io/badge/PORTFOLIO-VISIT-7C3AED?style=for-the-badge&logo=googlechrome&logoColor=white&labelColor=0D1117" alt="Portfolio"/></a>
-  <a href="https://www.linkedin.com/in/YOUR_LINKEDIN_ID/"><img src="https://img.shields.io/badge/LINKEDIN-CONNECT-6366F1?style=for-the-badge&logo=data:image/svg%2Bxml;base64,PHN2ZyBmaWxsPSJ3aGl0ZSIgcm9sZT0iaW1nIiB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI%2BPHRpdGxlPkxpbmtlZEluPC90aXRsZT48cGF0aCBkPSJNMjAuNDQ3IDIwLjQ1MmgtMy41NTR2LTUuNTY5YzAtMS4zMjgtLjAyNy0zLjAzNy0xLjg1Mi0zLjAzNy0xLjg1MyAwLTIuMTM2IDEuNDQ1LTIuMTM2IDIuOTM5djUuNjY3SDkuMzUxVjloMy40MTR2MS41NjFoLjA0NmMuNDc3LS45IDEuNjM3LTEuODUgMy4zNy0xLjg1IDMuNjAxIDAgNC4yNjcgMi4zNyA0LjI2NyA1LjQ1NXY2LjI4NnpNNS4zMzcgNy40MzNjLTEuMTQ0IDAtMi4wNjMtLjkyNi0yLjA2My0yLjA2NSAwLTEuMTM4LjkyLTIuMDYzIDIuMDYzLTIuMDYzIDEuMTQgMCAyLjA2NC45MjUgMi4wNjQgMi4wNjMgMCAxLjEzOS0uOTI1IDIuMDY1LTIuMDY0IDIuMDY1em0xLjc4MiAxMy4wMTlIMy41NTVWOWgzLjU2NHYxMS40NTJ6TTIyLjIyNSAwSDEuNzcxQy43OTIgMCAwIC43NzQgMCAxLjcyOXYyMC41NDJDMCAyMy4yMjcuNzkyIDI0IDEuNzcxIDI0aDIwLjQ1MUMyMy4yIDI0IDI0IDIzLjIyNyAyNCAyMi4yNzFWMS43MjlDMjQgLjc3NCAyMy4yIDAgMjIuMjIyIDBoLjAwM3oiLz48L3N2Zz4=&labelColor=0D1117" alt="LinkedIn"/></a>
+  <a href="https://www.linkedin.com/in/drakon/"><img src="https://img.shields.io/badge/LINKEDIN-CONNECT-6366F1?style=for-the-badge&logo=data:image/svg%2Bxml;base64,PHN2ZyBmaWxsPSJ3aGl0ZSIgcm9sZT0iaW1nIiB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI%2BPHRpdGxlPkxpbmtlZEluPC90aXRsZT48cGF0aCBkPSJNMjAuNDQ3IDIwLjQ1MmgtMy41NTR2LTUuNTY5YzAtMS4zMjgtLjAyNy0zLjAzNy0xLjg1Mi0zLjAzNy0xLjg1MyAwLTIuMTM2IDEuNDQ1LTIuMTM2IDIuOTM5djUuNjY3SDkuMzUxVjloMy40MTR2MS41NjFoLjA0NmMuNDc3LS45IDEuNjM3LTEuODUgMy4zNy0xLjg1IDMuNjAxIDAgNC4yNjcgMi4zNyA0LjI2NyA1LjQ1NXY2LjI4NnpNNS4zMzcgNy40MzNjLTEuMTQ0IDAtMi4wNjMtLjkyNi0yLjA2My0yLjA2NSAwLTEuMTM4LjkyLTIuMDYzIDIuMDYzLTIuMDYzIDEuMTQgMCAyLjA2NC45MjUgMi4wNjQgMi4wNjMgMCAxLjEzOS0uOTI1IDIuMDY1LTIuMDY0IDIuMDY1em0xLjc4MiAxMy4wMTlIMy41NTVWOWgzLjU2NHYxMS40NTJ6TTIyLjIyNSAwSDEuNzcxQy43OTIgMCAwIC43NzQgMCAxLjcyOXYyMC41NDJDMCAyMy4yMjcuNzkyIDI0IDEuNzcxIDI0aDIwLjQ1MUMyMy4yIDI0IDI0IDIzLjIyNyAyNCAyMi4yNzFWMS43MjlDMjQgLjc3NCAyMy4yIDAgMjIuMjIyIDBoLjAwM3oiLz48L3N2Zz4=&labelColor=0D1117" alt="LinkedIn"/></a>
   <a href="mailto:shibimoon08@gmail.com"><img src="https://img.shields.io/badge/EMAIL-CONTACT-4F46E5?style=for-the-badge&logo=gmail&logoColor=white&labelColor=0D1117" alt="Email"/></a>
   <a href="https://github.com/moon-drakon"><img src="https://img.shields.io/badge/GITHUB-MOON--DRAKON-8B5CF6?style=for-the-badge&logo=github&logoColor=white&labelColor=0D1117" alt="GitHub"/></a>
 </p>
@@ -33,7 +37,7 @@
 
 I'm a software engineering student. I build desktop and web software in Java, C, and JavaScript. I focus on clean architecture, secure data handling, and testing before release.
 
-My recent work includes two Java finance apps and an emergency blood-request system in C. Next, I'm going deeper into **AI / ML** and **full-stack web development**.
+I also build websites for clients, from a live WooCommerce store to a Next.js and Supabase platform. My coursework includes two Java finance apps and an emergency blood-request system in C. Next, I'm going deeper into **AI / ML**.
 
 - **Software engineering:** layered architecture (UI → Service → Model → Repository), OOP design, CI builds
 - **AI / ML:** Python, scikit-learn, and PyTorch; speech input; LLM apps with retrieval
@@ -71,7 +75,7 @@ My recent work includes two Java finance apps and an emergency blood-request sys
 <h3>Backend &amp; databases</h3>
 
 <p>
-  <img src="https://skillicons.dev/icons?i=nodejs,express,spring,fastapi,flask,sqlite,mysql,postgres,mongodb,firebase&theme=dark" alt="Backend and databases"/>
+  <img src="https://skillicons.dev/icons?i=nodejs,express,spring,fastapi,flask,supabase,postgres,sqlite,mysql,mongodb,firebase,wordpress&theme=dark" alt="Backend and databases"/>
 </p>
 
 <h3>Cloud, DevOps &amp; tooling</h3>
@@ -105,6 +109,66 @@ My recent work includes two Java finance apps and an emergency blood-request sys
 <h2 align="center">Featured projects</h2>
 
 <details open>
+<summary><b>Sacred Ganga</b> · Online puja service platform (client, in development)</summary>
+
+<br/>
+
+A web platform for Ganga Sankalp Puja at Har Ki Pauri, Haridwar, for families around the world. Each puja comes with a private video, photos, and a digital certificate.
+
+| Dimension | Details |
+|:--|:--|
+| **Stack** | Next.js 16 · React · TypeScript · Supabase (PostgreSQL) · Tailwind CSS · Zod |
+| **Scale** | 229 TypeScript files, 26 pages, 10 API routes, and 15 database migrations. Separate staging and production environments. |
+| **Performance** | Median response of 184 ms across 49 staging routes. No layout overflow at 375 px or 1440 px, and no console errors. |
+| **Security** | 31 Postgres row-level security policies. A server-side access policy guards every page, action, and API. CSP and frame-blocking headers, and 0 known production dependency vulnerabilities. |
+| **Impact** | Staging is live and auto-deploys from the `develop` branch to Hostinger. 38 test files, including SQL tests on PGlite. 0 contrast failures across 419 checked text elements. |
+| **Repository** | ![Private repository](https://img.shields.io/badge/Repository-Private-7C3AED?style=flat-square&logo=github&logoColor=white&labelColor=0D1117) |
+
+Staging and production stay strictly apart. Every non-production build is `noindex` and hidden from search. Access rules live on the server, not in hidden navigation. Database changes ship as reviewed migrations and run against an in-memory Postgres in tests before they touch a real database.
+
+</details>
+
+<details>
+<summary><b>Exclusive Closet BD</b> · Fashion e-commerce store (client, live)</summary>
+
+<br/>
+
+An online fashion store in Bangladesh for sarees, bridal and festive wear, jewelry, and bags.
+
+| Dimension | Details |
+|:--|:--|
+| **Stack** | WordPress · WooCommerce · Blocksy child theme · Variation Swatches · bKash payments |
+| **Scale** | 34 products across more than 15 categories, with visual swatches for product variations |
+| **Performance** | Served through Hostinger's CDN with Brotli compression and HTTP/3 |
+| **Security** | HTTPS across the store. Custom code lives in a child theme, so theme updates do not overwrite it. |
+| **Impact** | Live store at exclusiveclosetbd.com. I built it end to end, from catalog setup to checkout. |
+| **Live site** | [![Exclusive Closet BD](https://img.shields.io/badge/Live-exclusiveclosetbd.com-6366F1?style=flat-square&logo=googlechrome&logoColor=white&labelColor=0D1117)](https://exclusiveclosetbd.com/) |
+
+The catalog runs on WooCommerce with variation swatches, so shoppers pick options visually. The Blocksy child theme keeps every customization separate from the parent theme. Customers pay with bKash, the most common mobile wallet in Bangladesh.
+
+</details>
+
+<details>
+<summary><b>Mooky Universe</b> · Real-time birthday web app (live)</summary>
+
+<br/>
+
+A Netflix-style birthday site. Friends post wishes, and each wish appears live on every open device.
+
+| Dimension | Details |
+|:--|:--|
+| **Stack** | React · TypeScript · Tailwind CSS · Pusher Channels · Neon PostgreSQL · Vercel serverless functions |
+| **Scale** | Live wishes, a presence count ("X here now"), and a typing indicator, synced across devices |
+| **Performance** | Served from Vercel's edge cache with Brotli compression. New wishes show at once and reconcile with the server through SWR. |
+| **Security** | Database and Pusher secrets stay in serverless functions. Only public keys reach the browser. HTTPS with HSTS preload. |
+| **Impact** | Live at mookyuniverse.vercel.app. Built mobile-first for iOS and Android, with safe-area support and a fullscreen surprise stage. |
+| **Live site** | [![Mooky Universe](https://img.shields.io/badge/Live-mookyuniverse.vercel.app-4F46E5?style=flat-square&logo=googlechrome&logoColor=white&labelColor=0D1117)](https://mookyuniverse.vercel.app/) |
+
+Wishes travel over Pusher Channels, with a server-sent events fallback when WebSockets fail. Posts render right away, and SWR reconciles them with the database. Layouts use `svh` units and safe-area insets, so nothing jumps when the mobile address bar moves.
+
+</details>
+
+<details>
 <summary><b>TakaTrail</b> · Multi-user personal finance app</summary>
 
 <br/>
@@ -168,6 +232,29 @@ Requests and assignments move through defined states, from pending to fulfilled 
 
 <h2 align="center">Experience</h2>
 
+### Web Developer (Freelance) · Client projects
+
+`Since 2026`
+
+I build and ship websites for businesses, from WordPress stores to custom Next.js platforms.
+
+**Scope of work**
+
+- Building Sacred Ganga, a Next.js and Supabase platform for an online puja service, with staging, database migrations, and tests
+- Built and launched Exclusive Closet BD, a WooCommerce fashion store with 34 products and bKash checkout
+- Run hosting and deploys on Hostinger and Vercel
+- Work directly with owners on scope, content, and launch
+
+<p>
+  <img src="https://img.shields.io/badge/Next.js-7C3AED?style=flat-square&logo=nextdotjs&logoColor=white" alt="Next.js"/>
+  <img src="https://img.shields.io/badge/TypeScript-6366F1?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript"/>
+  <img src="https://img.shields.io/badge/Supabase-4F46E5?style=flat-square&logo=supabase&logoColor=white" alt="Supabase"/>
+  <img src="https://img.shields.io/badge/PostgreSQL-8B5CF6?style=flat-square&logo=postgresql&logoColor=white" alt="PostgreSQL"/>
+  <img src="https://img.shields.io/badge/WordPress-5B21B6?style=flat-square&logo=wordpress&logoColor=white" alt="WordPress"/>
+  <img src="https://img.shields.io/badge/WooCommerce-6D28D9?style=flat-square&logo=woocommerce&logoColor=white" alt="WooCommerce"/>
+  <img src="https://img.shields.io/badge/Tailwind%20CSS-7C3AED?style=flat-square&logo=tailwindcss&logoColor=white" alt="Tailwind CSS"/>
+</p>
+
 ### Software Engineering Undergraduate · North South University
 
 `Since 2025`
@@ -202,6 +289,7 @@ I build and document software in public. I focus on clean code, security, and re
 
 - Maintain public repositories with architecture, security, and verification docs
 - Run builds and checks with GitHub Actions
+- Built Mooky Universe, a real-time web app on React, Pusher, and Neon Postgres
 - Build AI / ML and full-stack prototypes in Python, React, and Node.js
 - Scope from user needs, test with real use, and ship with clear docs
 
@@ -222,6 +310,8 @@ I build and document software in public. I focus on clean code, security, and re
 
 | Recognition | Details |
 |:--|:--|
+| **Client work shipped** | Launched the Exclusive Closet BD store and built the Sacred Ganga platform through to a live staging site |
+| **Real-time web app** | Mooky Universe syncs wishes, presence, and typing state across devices with Pusher and Neon Postgres |
 | **Verified releases** | TakaTrail passed 31 of 31 functional smoke checks and 10 of 10 transaction-table UI checks |
 | **Security by design** | PBKDF2WithHmacSHA256, BCrypt, email OTP, and role-based access across two finance apps |
 | **Large Java codebase** | Wealthora has 2.3 MB+ of Java across 10 layered packages, with CI on GitHub Actions |
@@ -349,6 +439,7 @@ learning:
   - Cloud architecture on AWS
 
 building:
+  - Sacred Ganga, from staging to public launch
   - Secure desktop and web apps
   - AI-assisted personal finance tools
   - Full-stack products with React, Next.js, and Node.js
@@ -372,7 +463,7 @@ open_to:
 
 <p>
   <a href="mailto:shibimoon08@gmail.com"><img src="https://img.shields.io/badge/Gmail-Email%20Me-7C3AED?style=for-the-badge&logo=gmail&logoColor=white&labelColor=0D1117" alt="Gmail"/></a>
-  <a href="https://www.linkedin.com/in/YOUR_LINKEDIN_ID/"><img src="https://img.shields.io/badge/LinkedIn-Connect-6366F1?style=for-the-badge&logo=data:image/svg%2Bxml;base64,PHN2ZyBmaWxsPSJ3aGl0ZSIgcm9sZT0iaW1nIiB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI%2BPHRpdGxlPkxpbmtlZEluPC90aXRsZT48cGF0aCBkPSJNMjAuNDQ3IDIwLjQ1MmgtMy41NTR2LTUuNTY5YzAtMS4zMjgtLjAyNy0zLjAzNy0xLjg1Mi0zLjAzNy0xLjg1MyAwLTIuMTM2IDEuNDQ1LTIuMTM2IDIuOTM5djUuNjY3SDkuMzUxVjloMy40MTR2MS41NjFoLjA0NmMuNDc3LS45IDEuNjM3LTEuODUgMy4zNy0xLjg1IDMuNjAxIDAgNC4yNjcgMi4zNyA0LjI2NyA1LjQ1NXY2LjI4NnpNNS4zMzcgNy40MzNjLTEuMTQ0IDAtMi4wNjMtLjkyNi0yLjA2My0yLjA2NSAwLTEuMTM4LjkyLTIuMDYzIDIuMDYzLTIuMDYzIDEuMTQgMCAyLjA2NC45MjUgMi4wNjQgMi4wNjMgMCAxLjEzOS0uOTI1IDIuMDY1LTIuMDY0IDIuMDY1em0xLjc4MiAxMy4wMTlIMy41NTVWOWgzLjU2NHYxMS40NTJ6TTIyLjIyNSAwSDEuNzcxQy43OTIgMCAwIC43NzQgMCAxLjcyOXYyMC41NDJDMCAyMy4yMjcuNzkyIDI0IDEuNzcxIDI0aDIwLjQ1MUMyMy4yIDI0IDI0IDIzLjIyNyAyNCAyMi4yNzFWMS43MjlDMjQgLjc3NCAyMy4yIDAgMjIuMjIyIDBoLjAwM3oiLz48L3N2Zz4=&labelColor=0D1117" alt="LinkedIn"/></a>
+  <a href="https://www.linkedin.com/in/drakon/"><img src="https://img.shields.io/badge/LinkedIn-Connect-6366F1?style=for-the-badge&logo=data:image/svg%2Bxml;base64,PHN2ZyBmaWxsPSJ3aGl0ZSIgcm9sZT0iaW1nIiB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI%2BPHRpdGxlPkxpbmtlZEluPC90aXRsZT48cGF0aCBkPSJNMjAuNDQ3IDIwLjQ1MmgtMy41NTR2LTUuNTY5YzAtMS4zMjgtLjAyNy0zLjAzNy0xLjg1Mi0zLjAzNy0xLjg1MyAwLTIuMTM2IDEuNDQ1LTIuMTM2IDIuOTM5djUuNjY3SDkuMzUxVjloMy40MTR2MS41NjFoLjA0NmMuNDc3LS45IDEuNjM3LTEuODUgMy4zNy0xLjg1IDMuNjAxIDAgNC4yNjcgMi4zNyA0LjI2NyA1LjQ1NXY2LjI4NnpNNS4zMzcgNy40MzNjLTEuMTQ0IDAtMi4wNjMtLjkyNi0yLjA2My0yLjA2NSAwLTEuMTM4LjkyLTIuMDYzIDIuMDYzLTIuMDYzIDEuMTQgMCAyLjA2NC45MjUgMi4wNjQgMi4wNjMgMCAxLjEzOS0uOTI1IDIuMDY1LTIuMDY0IDIuMDY1em0xLjc4MiAxMy4wMTlIMy41NTVWOWgzLjU2NHYxMS40NTJ6TTIyLjIyNSAwSDEuNzcxQy43OTIgMCAwIC43NzQgMCAxLjcyOXYyMC41NDJDMCAyMy4yMjcuNzkyIDI0IDEuNzcxIDI0aDIwLjQ1MUMyMy4yIDI0IDI0IDIzLjIyNyAyNCAyMi4yNzFWMS43MjlDMjQgLjc3NCAyMy4yIDAgMjIuMjIyIDBoLjAwM3oiLz48L3N2Zz4=&labelColor=0D1117" alt="LinkedIn"/></a>
   <a href="https://github.com/moon-drakon"><img src="https://img.shields.io/badge/GitHub-Follow-4F46E5?style=for-the-badge&logo=github&logoColor=white&labelColor=0D1117" alt="GitHub"/></a>
   <a href="https://github.com/moon-drakon?tab=repositories"><img src="https://img.shields.io/badge/Portfolio-Explore-8B5CF6?style=for-the-badge&logo=googlechrome&logoColor=white&labelColor=0D1117" alt="Portfolio"/></a>
 </p>

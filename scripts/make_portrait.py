@@ -7,6 +7,11 @@ Run it by hand when the source image changes. The scheduled workflow does not ru
     python scripts/make_portrait.py source.jpg --crop 40,0,440,400
     python scripts/make_portrait.py source.jpg --preview     # print the grid too
 
+The current profile/portrait.svg came from a background-removed headshot (a
+transparent PNG made with rembg's u2net_human_seg model) and these settings:
+
+    python scripts/make_portrait.py cutout.png --dark-is-dense --crop 330,80,1700,1500         --contrast 0.15 --curve 1.9 --sharpen 3.0 --blur 1.2
+
 Bright pixels become dense characters by default. That suits a subject on a dark
 background. For a subject on a light background, pass --dark-is-dense.
 
@@ -43,7 +48,7 @@ FILL_DARK = "#C4B5FD"     # violet-300 on GitHub dark
 FILL_LIGHT = "#6D28D9"    # violet-700 on GitHub light
 
 
-def load(path, crop, dark_is_dense, contrast, curve, blur, floor=0.0):
+def load(path, crop, dark_is_dense, contrast, curve, blur, floor=0.0, sharpen=0.0):
     src = Image.open(path)
     if crop:
         src = src.crop(crop)
@@ -55,6 +60,9 @@ def load(path, crop, dark_is_dense, contrast, curve, blur, floor=0.0):
         white = Image.new("RGBA", src.size, (255, 255, 255, 255))
         src = Image.alpha_composite(white, src)
     img = src.convert("L")
+    if sharpen:
+        # Local contrast: lifts eyes, brows, and lips out of the mid tones.
+        img = img.filter(ImageFilter.UnsharpMask(radius=max(2, round(img.width / 120)), percent=int(sharpen * 100), threshold=2))
     if blur:
         img = img.filter(ImageFilter.GaussianBlur(blur))
     img = ImageOps.autocontrast(img, cutoff=1)
@@ -145,6 +153,8 @@ def main():
     ap.add_argument("--blur", type=float, default=0.6, help="pre-blur radius in source pixels")
     ap.add_argument("--floor", type=float, default=0.0,
                     help="0 to 1, tones below this become blank (drops a dim backdrop)")
+    ap.add_argument("--sharpen", type=float, default=0.0,
+                    help="local contrast strength, for example 1.5; brings out facial features")
     ap.add_argument("--preview", action="store_true", help="print the grid to the terminal")
     args = ap.parse_args()
 
@@ -154,7 +164,7 @@ def main():
         if len(crop) != 4:
             sys.exit("--crop takes four numbers: left,top,right,bottom")
 
-    lines = to_grid(load(args.image, crop, args.dark_is_dense, args.contrast, args.curve, args.blur, args.floor), args.cols)
+    lines = to_grid(load(args.image, crop, args.dark_is_dense, args.contrast, args.curve, args.blur, args.floor, args.sharpen), args.cols)
     if args.preview:
         print("\n".join(lines))
     os.makedirs(os.path.dirname(os.path.abspath(args.out)), exist_ok=True)
