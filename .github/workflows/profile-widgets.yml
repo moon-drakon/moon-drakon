@@ -26,11 +26,12 @@ jobs:
       - name: Prepare output directory
         run: mkdir -p profile
 
-      - name: Hero card and stars badge
+      - name: Hero card, skyline, and badges
         continue-on-error: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_LOGIN: ${{ github.repository_owner }}
+          CF_HANDLE: shiblimoon
         run: python3 scripts/generate_stats.py
 
       - name: GitHub stats card

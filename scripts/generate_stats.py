@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Draw profile/hero.svg and write profile/stars.json from the GitHub GraphQL API.
+"""Draw the profile graphics and badge data from the GitHub GraphQL API.
 
 The scheduled workflow runs this. It uses the standard library only.
 
@@ -9,8 +9,13 @@ hero.svg: contributions in the last year, active days, best week, and a weekly
 sparkline. The window is pinned to whole UTC days so two runs on the same day
 produce the same file.
 
+skyline.svg: the same year as an isometric skyline (see skyline.py).
+
 stars.json: a shields.io endpoint badge with the number on the profile's Stars
 tab (repositories this account has starred).
+
+codeforces.json: a shields.io endpoint badge with the count of solved Codeforces
+problems, when CF_HANDLE is set. If the Codeforces API fails, the old file stays.
 """
 import base64
 import datetime as dt
@@ -18,6 +23,8 @@ import json
 import os
 import sys
 import urllib.request
+
+import skyline
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
@@ -73,6 +80,8 @@ def summarize(user):
         "best_week": max(weeks) if weeks else 0,
         "weeks": weeks,
         "starred": user["starredRepositories"]["totalCount"],
+        "days": [{"date": d["date"], "count": d["contributionCount"]}
+                 for w in cal["weeks"] for d in w["contributionDays"]],
     }
 
 
@@ -147,6 +156,29 @@ def draw(s):
 """
 
 
+def write_badge(name, label, message):
+    with open(os.path.join(OUT, name), "w", encoding="utf-8", newline="\n") as f:
+        json.dump({"schemaVersion": 1, "label": label, "message": message}, f)
+        f.write("\n")
+
+
+def codeforces_solved(handle):
+    """Distinct problems with an accepted submission, or None if the API is unavailable."""
+    url = f"https://codeforces.com/api/user.status?handle={urllib.request.quote(handle)}"
+    try:
+        req = urllib.request.Request(url, headers={"User-Agent": "profile-stats"})
+        with urllib.request.urlopen(req, timeout=30) as r:
+            body = json.load(r)
+    except Exception as e:  # network or JSON failure: keep the previous badge
+        print(f"codeforces skipped: {e}")
+        return None
+    if body.get("status") != "OK":
+        print(f"codeforces skipped: {body.get('comment')}")
+        return None
+    return len({(sub["problem"].get("contestId"), sub["problem"].get("index"))
+                for sub in body["result"] if sub.get("verdict") == "OK"})
+
+
 def main():
     token = os.environ.get("GITHUB_TOKEN")
     login = os.environ.get("GH_LOGIN")
@@ -156,10 +188,17 @@ def main():
     os.makedirs(OUT, exist_ok=True)
     with open(os.path.join(OUT, "hero.svg"), "w", encoding="utf-8", newline="\n") as f:
         f.write(draw(s))
-    badge = {"schemaVersion": 1, "label": "STARS", "message": str(s["starred"])}
-    with open(os.path.join(OUT, "stars.json"), "w", encoding="utf-8", newline="\n") as f:
-        json.dump(badge, f)
-        f.write("\n")
+    end = dt.datetime.now(dt.timezone.utc).date()
+    fonts = font_face("SMono", "mono-label.woff2", 400) + font_face("SMono", "mono-number.woff2", 700)
+    with open(os.path.join(OUT, "skyline.svg"), "w", encoding="utf-8", newline="\n") as f:
+        f.write(skyline.draw(s["days"], end, fonts))
+    write_badge("stars.json", "STARS", str(s["starred"]))
+    handle = os.environ.get("CF_HANDLE")
+    if handle:
+        solved = codeforces_solved(handle)
+        if solved is not None:
+            write_badge("codeforces.json", "CODEFORCES", f"{solved} SOLVED")
+            print(f"codeforces solved={solved}")
     print(f"total={s['total']} active={s['active']} best_week={s['best_week']} starred={s['starred']}")
 
 

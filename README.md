@@ -359,6 +359,10 @@ I build and document software in public. I focus on clean code, security, and re
 <div align="center">
 
 <p>
+  <a href="https://codeforces.com/profile/shiblimoon"><img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fmoon-drakon%2Fmoon-drakon%2Fmain%2Fprofile%2Fcodeforces.json&style=for-the-badge&logo=codeforces&logoColor=white&color=7C3AED&labelColor=0D1117" height="40" alt="Codeforces"/></a>
+</p>
+
+<p>
   <a href="https://leetcode.com/u/YOUR_LEETCODE_USERNAME/"><img src="https://img.shields.io/badge/LeetCode-Problem%20Solving-7C3AED?style=for-the-badge&logo=leetcode&logoColor=white&labelColor=0D1117" height="40" alt="LeetCode"/></a>
   &nbsp;
   <a href="https://www.geeksforgeeks.org/user/YOUR_GFG_USERNAME/"><img src="https://img.shields.io/badge/GeeksforGeeks-Data%20Structures-6366F1?style=for-the-badge&logo=geeksforgeeks&logoColor=white&labelColor=0D1117" height="40" alt="GeeksforGeeks"/></a>
@@ -397,6 +401,18 @@ I build and document software in public. I focus on clean code, security, and re
 
 <p>
   <img src="https://raw.githubusercontent.com/moon-drakon/moon-drakon/main/profile/trophy.svg" alt="GitHub trophies"/>
+</p>
+
+</div>
+
+---
+
+<h2 align="center">Contribution skyline</h2>
+
+<div align="center">
+
+<p>
+  <img src="https://raw.githubusercontent.com/moon-drakon/moon-drakon/main/profile/skyline.svg" width="100%" alt="A year of contributions shown as a 3D skyline"/>
 </p>
 
 </div>
