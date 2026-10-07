@@ -42,8 +42,8 @@ FONT_SIZE = 12.9
 CHAR_W = FONT_SIZE * 0.6
 LINE_H = 15
 PAD = 14
-ROW_STEP = 0.07           # seconds between rows starting to type
-ROW_TIME = 0.12           # seconds for one row to type
+ROW_TIME = 0.11           # seconds for one row to type
+ROW_STEP = ROW_TIME       # each row starts when the one above finishes, one line at a time
 FILL_DARK = "#C4B5FD"     # violet-300 on GitHub dark
 FILL_LIGHT = "#6D28D9"    # violet-700 on GitHub light
 
