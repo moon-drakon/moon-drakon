@@ -102,8 +102,10 @@ jobs:
 
       - name: Commit widgets
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          # This address belongs to no GitHub account, so automated refreshes stay out of
+          # the Contributors list and out of the contribution graph.
+          git config user.name "profile-widgets"
+          git config user.email "profile-widgets@moon-drakon.invalid"
           git add profile/*.svg profile/*.json
           git commit -m "chore: refresh profile widgets" || exit 0
           git push
